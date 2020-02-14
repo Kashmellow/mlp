@@ -84,6 +84,18 @@ namespace mlp.Tests
             //Assert
             Assert.Equal(DateTime.Today, model.DateTimeGroup);
         }
+
+        [Fact]
+        public void Can_Assign_A_Description()
+        {
+            //Arrange
+
+            //Act
+            model.Description = "Description info";
+
+            //Assert
+            Assert.Equal("Description info", model.Description);
+        }
     }
 
 }
