@@ -14,5 +14,10 @@ namespace mlp.Models
         public string Review { get; set; }
         public DateTime DateTimeGroup { get; set; }
         public string Description { get; set; }
+
+        public Product()
+        {
+
+        }
     }
 }
