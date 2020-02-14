@@ -14,13 +14,13 @@ namespace mlp.Repositories
         {
             productDictionary = new Dictionary<int, Product>()
             {
-                {1, new Product(1, "Rainbow Dash", "rainbowdash.png", "Leader", "This is my review", DateTime.Now, "I am a strong Pony! Haaaaay!");  }
+                { 1, new Product(1, "Rainbow Dash", "rainbowdash.png", "Leader", "This is my review", DateTime.Now, "I am a strong Pony! Haaaaay!") },
             };
         }
 
         public IEnumerable<Product> GetAll()
         {
-            return productDictionary.Values;
+            throw new NotImplementedException();
         }
     }
 }
