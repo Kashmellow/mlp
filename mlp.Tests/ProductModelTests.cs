@@ -36,5 +36,17 @@ namespace mlp.Tests
             //Assert
             Assert.Equal("Rainbow Dash", model.Name);
         }
+
+        [Fact]
+        public void Can_Assign_An_Image()
+        {
+            //Arrange
+
+            //Act
+            model.Image = "image";
+
+            //Assert
+            Assert.Equal("image", model.Image);
+        }
     }
 }
