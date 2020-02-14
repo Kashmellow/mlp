@@ -13,6 +13,9 @@ namespace mlp.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
+            // Create repository
+            // Set to model
+            // Pass model to view
             return View();
         }
     }
