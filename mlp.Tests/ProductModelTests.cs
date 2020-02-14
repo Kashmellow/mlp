@@ -24,5 +24,17 @@ namespace mlp.Tests
             //Assert
             Assert.Equal(1, model.Id);
         }
+
+        [Fact]
+        public void Can_Assign_A_Name()
+        {
+            //Arrange
+
+            //Act
+            model.Name = "Rainbow Dash";
+
+            //Assert
+            Assert.Equal("Rainbow Dash", model.Name);
+        }
     }
 }
