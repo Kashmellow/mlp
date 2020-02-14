@@ -72,6 +72,18 @@ namespace mlp.Tests
             //Assert
             Assert.Equal("Review info", model.Review);
         }
+
+        [Fact]
+        public void Can_Assign_A_DateTimeGroup()
+        {
+            //Arrange
+
+            //Act
+            model.DateTimeGroup = DateTime.Today;
+
+            //Assert
+            Assert.Equal(DateTime.Today, model.DateTimeGroup);
+        }
     }
 
 }
