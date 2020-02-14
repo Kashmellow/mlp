@@ -48,5 +48,18 @@ namespace mlp.Tests
             //Assert
             Assert.Equal("image", model.Image);
         }
+
+        [Fact]
+        public void Can_Assign_A_Category()
+        {
+            //Arrange
+
+            //Act
+            model.Category = "category info";
+
+            //Assert
+            Assert.Equal("category info", model.Category);
+        }
     }
+
 }
