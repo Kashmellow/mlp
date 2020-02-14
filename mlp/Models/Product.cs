@@ -19,5 +19,16 @@ namespace mlp.Models
         {
 
         }
+
+        public Product(int id, string name, string image, string category, string review, DateTime dateTimeGroup, string description)
+        {
+            Id = id;
+            Name = name;
+            Image = image;
+            Category = category;
+            Review = review;
+            DateTimeGroup = dateTimeGroup;
+            Description = description;
+        }
     }
 }
