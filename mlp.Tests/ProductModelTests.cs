@@ -60,6 +60,18 @@ namespace mlp.Tests
             //Assert
             Assert.Equal("category info", model.Category);
         }
+
+        [Fact]
+        public void Can_Assign_A_Review()
+        {
+            //Arrange
+
+            //Act
+            model.Review = "Review info";
+
+            //Assert
+            Assert.Equal("Review info", model.Review);
+        }
     }
 
 }
