@@ -20,7 +20,7 @@ namespace mlp.Repositories
 
         public IEnumerable<Product> GetAll()
         {
-            throw new NotImplementedException();
+            return productDictionary.Values;
         }
     }
 }
