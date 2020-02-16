@@ -25,5 +25,11 @@ namespace mlp.Repositories
         {
             return productDictionary.Values;
         }
+
+        public Product GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

@@ -22,5 +22,11 @@ namespace mlp.Controllers
             // Pass model to view
             return View(model);
         }
+
+        public IActionResult ProductDetail()
+        {
+            return View();
+        }
     }
+
 }

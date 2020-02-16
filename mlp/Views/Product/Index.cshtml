@@ -12,6 +12,9 @@
 </head>
 <body>
     <h1>My Little Pony List</h1>
+    <nav>
+    <a asp-area="" asp-controller="Product" asp-action="ProductDetail">Product Details</a>
+        </nav>
     @foreach (var pony in Model)
     {
         <h2>@pony.Name</h2>
