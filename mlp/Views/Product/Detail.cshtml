@@ -1,0 +1,24 @@
+﻿@model mlp.Models.Product
+<h1>@Model.Name</h1>
+
+<section id="spartanprojects">
+    <div id="projects">
+
+        <article>
+            <img src="~/img/@Model.Image" alt="@Model.Name">
+            <h3>@Model.Name</h3>
+            <p>
+                @Model.Description
+            </p>
+            <p>
+                @Model.Category
+            </p>
+            <p>
+                @Model.DateTimeGroup
+            </p>
+            <p>Review: @Model.Review</p>
+        </article>
+
+    </div>
+
+</section>
