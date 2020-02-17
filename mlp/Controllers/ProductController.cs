@@ -23,9 +23,11 @@ namespace mlp.Controllers
             return View(model);
         }
 
-        public IActionResult ProductDetail()
+        public IActionResult Detail()
         {
             return View();
+            //add data from Id Lookup
+            //pass model to view 
         }
     }
 
