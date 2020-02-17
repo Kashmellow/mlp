@@ -8,15 +8,17 @@
 }
 
 .bgred {
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(126,3,3,1) 94%);
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, -1px 9px 27px -9px rgba(0,0,0,0);
-    box-shadow: 0px 10px 13px -7px #000000, -1px 9px 27px -9px rgba(0,0,0,0);
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
 }
 
 header, section {
     margin: 1em 0;
     padding: 3em;
     min-height: 20em;
+}
+
+h1{
+    padding-top: 2em;
 }
 
     section > p {
@@ -71,7 +73,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(126,3,3,1) 94%);
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
 }
 
 .navalign {
