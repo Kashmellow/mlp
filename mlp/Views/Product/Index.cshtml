@@ -12,14 +12,13 @@
 </head>
 <body>
     <h1>My Little Pony List</h1>
-    <nav>
-    <a href="https://localhost:44384/Product/Detail">Product Details</a>
-        </nav>
+   
     @foreach (var pony in Model)
     {
         <h2>@pony.Name</h2>
+        <a href="/Product/Detail/@pony.Id">@pony.Name</a>
         <h2>ID: @pony.Id</h2>
-        <img src="~/App_GlobalResources/img/@pony.Image" alt="@pony.Name" />
+        <img src="~/img/@pony.Image" alt="@pony.Name" />
         <h3>Category: @pony.Category</h3>
         <p>Review: @pony.Review</p>
         <p>Date: @pony.DateTimeGroup</p>
