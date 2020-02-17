@@ -37,7 +37,6 @@ namespace mlp.Tests
         }
 
         [Fact]
-
         public void Detail_Returns_View()
         {
             //act
