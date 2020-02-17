@@ -26,6 +26,15 @@ namespace mlp.Tests
             Assert.IsType<ViewResult>(result);
         }
 
+        [Fact]
+        public void Index_Passes_All_ProductModels_To_View()
+        {
+            //act
+            var result = controller.Index();
+
+            //assert
+            Assert.IsAssignableFrom<IEnumerable<Product>>(result.Model);
+        }
 
     }
 }

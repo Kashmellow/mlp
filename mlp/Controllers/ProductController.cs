@@ -12,7 +12,7 @@ namespace mlp.Controllers
     public class ProductController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index()
+        public  ViewResult Index()
         {
             // Create repository
             ProductRepository productRepo = new ProductRepository();
@@ -23,7 +23,7 @@ namespace mlp.Controllers
             return View(model);
         }
 
-        public IActionResult Detail(int id)
+        public ViewResult Detail(int id)
         {
 
             ProductRepository productRepo = new ProductRepository();
