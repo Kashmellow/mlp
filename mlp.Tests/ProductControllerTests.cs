@@ -48,5 +48,15 @@ namespace mlp.Tests
 
         }
 
+        [Fact]
+        public void Details_Passes_ProductModel_To_View()
+        {
+            //act
+            var result = controller.Detail(1);
+
+            //assert
+            Assert.IsType<Product>(result.Model);
+        }
+
     }
 }
