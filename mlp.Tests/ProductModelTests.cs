@@ -95,6 +95,7 @@ namespace mlp.Tests
 
             //Assert
             Assert.Equal("Description info", model.Description);
+
         }
     }
 
