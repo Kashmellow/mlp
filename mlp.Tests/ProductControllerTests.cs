@@ -36,5 +36,17 @@ namespace mlp.Tests
             Assert.IsAssignableFrom<IEnumerable<Product>>(result.Model);
         }
 
+        [Fact]
+
+        public void Detail_Returns_View()
+        {
+            //act
+            var result = controller.Detail(1);
+
+            //assert
+            Assert.IsType<ViewResult>(result);
+
+        }
+
     }
 }
