@@ -1,19 +1,28 @@
 ﻿@model IEnumerable<mlp.Models.Product>
+<h1>My Little Pony List</h1>
 
+<section id="spartanprojects">
+    <div id="projects">
 
-    <h1>My Little Pony List</h1>
-   
-    @foreach (var pony in Model)
-    {
-        <h2>@pony.Name</h2>
-        <a href="/Product/Detail/@pony.Id">@pony.Name</a>
-        <h2>ID: @pony.Id</h2>
-        <img src="~/img/@pony.Image" alt="@pony.Name" />
-        <h3>Category: @pony.Category</h3>
-        <p>Review: @pony.Review</p>
-        <p>Date: @pony.DateTimeGroup</p>
-        <p>Description: @pony.Description</p>
+        @foreach (var pony in Model)
+        {
+            <article>
+                <a href="/Product/Detail/@pony.Id">
+                    <img src="~/img/@pony.Image" alt="@pony.Name">
+                    <h3>@pony.Name</h3>
+                    <p>
+                        @pony.Description
+                    </p>
+                    <p>
+                        @pony.Category
+                    </p>
+                    <p>
+                        @pony.DateTimeGroup
+                    </p>
+                </a>
+            </article>
+        }
 
-        <hr />
-    }
+    </div>
 
+</section>
