@@ -8,9 +8,11 @@ namespace mlp
     {
         public DbSet<Product> Products { get; set; }
 
+        public DbSet<Review> Reviews { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=MusicTesting;Trusted_Connection=True;";
+            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=Mlp;Trusted_Connection=True;";
 
             optionsBuilder.UseSqlServer(connectionString)
               .UseLazyLoadingProxies();
