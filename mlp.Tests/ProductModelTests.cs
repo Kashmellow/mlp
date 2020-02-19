@@ -19,10 +19,10 @@ namespace mlp.Tests
             //Arrange
 
             //Act
-            model.Id = 1;
+            model.ProductId = 1;
 
             //Assert
-            Assert.Equal(1, model.Id);
+            Assert.Equal(1, model.ProductId);
         }
 
         [Fact]
@@ -61,17 +61,6 @@ namespace mlp.Tests
             Assert.Equal("category info", model.Category);
         }
 
-        [Fact]
-        public void Can_Assign_A_Review()
-        {
-            //Arrange
-
-            //Act
-            model.Review = "Review info";
-
-            //Assert
-            Assert.Equal("Review info", model.Review);
-        }
 
         [Fact]
         public void Can_Assign_A_DateTimeGroup()

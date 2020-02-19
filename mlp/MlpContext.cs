@@ -1,5 +1,6 @@
 ﻿using mlp.Models;
-using Microsoft.Entity
+using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace mlp
 {

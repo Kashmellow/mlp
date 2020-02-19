@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace mlp.Models
 {
@@ -22,7 +23,7 @@ namespace mlp.Models
 
         public Product(int id, string name, string image, string category, DateTime dateTimeGroup, string description)
         {
-            Id = id;
+            ProductId = id;
             Name = name;
             Image = image;
             Category = category;
