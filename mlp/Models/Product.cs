@@ -7,7 +7,7 @@ namespace mlp.Models
 {
     public class Product
     {
-        public int Id { get; set; }
+        public int ProductId { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
         public string Category { get; set; }

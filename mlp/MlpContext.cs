@@ -1,9 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using mlp.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using mlp.Models;
+using Microsoft.Entity
 
 namespace mlp
 {
