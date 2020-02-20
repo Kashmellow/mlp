@@ -33,7 +33,7 @@ namespace mlp.Tests
         public void Count_Starts_At_Zero()
         {
             var count = underTest.Count();
-            Assert.Equal(4, count);
+            Assert.Equal(0, count);
         }
 
         [Fact]

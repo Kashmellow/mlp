@@ -16,7 +16,12 @@
             <p>
                 @Model.DateTimeGroup
             </p>
-        
+
+            @foreach (var review in Model.Reviews)
+            {
+                <p>@review.ReviewerName</p>
+                <p>@review.Content</p>
+            }
         </article>
 
     </div>
