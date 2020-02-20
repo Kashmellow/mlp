@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mlp.Repositories
 {
-    public class Repository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
         private DbContext db;
 
