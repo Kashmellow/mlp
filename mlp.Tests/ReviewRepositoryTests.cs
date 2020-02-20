@@ -39,7 +39,13 @@ namespace mlp.Tests
         [Fact]
         public void Create_Increases_Count()
         {
-            underTest.Create(new Review() { ProductID = 1 });
+            underTest.Create(new Review()
+            {
+                Content = "I love this pony",
+                ReviewerName = "Carl",
+                Rating = 5.0,
+                ProductId = 1,
+            });
 
             var count = underTest.Count();
             Assert.Equal(1, count);
@@ -48,12 +54,12 @@ namespace mlp.Tests
         [Fact]
         public void GetById_Returns_Created_Item()
         {
-            var expectedContent = new Review() { ReviewID = 0 };
+            var expectedContent = new Review() { ReviewId = 0 };
             underTest.Create(expectedContent);
 
-            var result = underTest.GetById(expectedContent.ReviewID);
+            var result = underTest.GetById(expectedContent.ReviewId);
 
-            Assert.Equal(expectedContent.ReviewID, result.ReviewID);
+            Assert.Equal(expectedContent.ReviewId, result.ReviewId);
         }
 
         [Fact]

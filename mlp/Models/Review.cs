@@ -8,12 +8,14 @@ namespace mlp.Models
 {
     public class Review
     {
-        public int ReviewID { get; set; }
+        public int ReviewId { get; set; }
         public string Content { get; set; }
         public string ReviewerName { get; set; }
         public double Rating { get; set; }
-        public int ProductID { get; set; }
+       
         public virtual Product Product { get; set; }
+        public virtual int ProductId { get; set; }
+
         public Review()
         {
 

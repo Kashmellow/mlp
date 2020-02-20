@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using mlp;
 
 namespace mlp.Migrations
 {
     [DbContext(typeof(MlpContext))]
-    partial class MlpContextModelSnapshot : ModelSnapshot
+    [Migration("20200220153649_ThirdMigration")]
+    partial class ThirdMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,13 +50,16 @@ namespace mlp.Migrations
 
             modelBuilder.Entity("mlp.Models.Review", b =>
                 {
-                    b.Property<int>("ReviewId")
+                    b.Property<int>("ReviewID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
@@ -65,9 +70,9 @@ namespace mlp.Migrations
                     b.Property<string>("ReviewerName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ReviewId");
+                    b.HasKey("ReviewID");
 
-                    b.HasIndex("ProductId");
+                    b.HasIndex("ProductID");
 
                     b.ToTable("Reviews");
                 });
@@ -76,7 +81,7 @@ namespace mlp.Migrations
                 {
                     b.HasOne("mlp.Models.Product", "Product")
                         .WithMany("Reviews")
-                        .HasForeignKey("ProductId")
+                        .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
