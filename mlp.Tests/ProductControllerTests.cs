@@ -13,7 +13,7 @@ namespace mlp.Tests
         ProductController controller;
         public ProductControllerTests()
         {
-            controller = new ProductController();
+            //controller = new ProductController();
         }
 
         [Fact]
