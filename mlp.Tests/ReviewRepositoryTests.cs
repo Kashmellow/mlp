@@ -33,7 +33,7 @@ namespace mlp.Tests
         public void Count_Starts_At_Zero()
         {
             var count = underTest.Count();
-            Assert.Equal(0, count);
+            Assert.Equal(4, count);
         }
 
         [Fact]
@@ -48,41 +48,66 @@ namespace mlp.Tests
             });
 
             var count = underTest.Count();
-            Assert.Equal(1, count);
+            Assert.Equal(5, count);
         }
 
         [Fact]
         public void GetById_Returns_Created_Item()
         {
-            var expectedContent = new Review() { ReviewId = 0 };
-            underTest.Create(expectedContent);
+            var expectedReview = new Review()
+            {
+                Content = "I love this pony",
+                ReviewerName = "Carl",
+                Rating = 5.0,
+                ProductId = 1,
+            };
+            underTest.Create(expectedReview);
 
-            var result = underTest.GetById(expectedContent.ReviewId);
+            var result = underTest.GetById(expectedReview.ReviewId);  // The Id was set by EF when we call Create above.
 
-            Assert.Equal(expectedContent.ReviewId, result.ReviewId);
+            Assert.Equal(expectedReview.Content, result.Content);
         }
 
         [Fact]
         public void Delete_Reduces_Count()
         {
-            var myReview = new Review() { Content = "My Review Text" };
-            underTest.Create(myReview);
+            var review = new Review()
+            {
+                Content = "I love this pony",
+                ReviewerName = "Carl",
+                Rating = 5.0,
+                ProductId = 1,
+            };
+            underTest.Create(review);
 
-            underTest.Delete(myReview);
+            underTest.Delete(review);
             var count = underTest.Count();
 
-            Assert.Equal(0, count);
+            Assert.Equal(4, count);
         }
 
         [Fact]
         public void GetAll_Returns_All()
         {
-            underTest.Create(new Review() { Content = "My Review Text" });
-            underTest.Create(new Review() { Content = "My Review Text 2" });
+            underTest.Create(new Review()
+            {
+                Content = "I love this pony",
+                ReviewerName = "Carl",
+                Rating = 5.0,
+                ProductId = 1,
+            });
+
+            underTest.Create(new Review()
+            {
+                Content = "This pony can Fly",
+                ReviewerName = "Amelia",
+                Rating = 4.6,
+                ProductId = 1,
+            });
 
             var all = underTest.GetAll();
 
-            Assert.Equal(2, all.Count());
+            Assert.Equal(6, all.Count());
         }
 
 
