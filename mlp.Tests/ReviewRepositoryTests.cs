@@ -39,7 +39,7 @@ namespace mlp.Tests
         [Fact]
         public void Create_Increases_Count()
         {
-            underTest.Create(new Song() { Title = "Foo" });
+            underTest.Create(new Review() { ProductID = 1 });
 
             var count = underTest.Count();
             Assert.Equal(1, count);
@@ -48,21 +48,21 @@ namespace mlp.Tests
         [Fact]
         public void GetById_Returns_Created_Item()
         {
-            var expectedSong = new Song() { Title = "Baby Shark" };
-            underTest.Create(expectedSong);
+            var expectedContent = new Review() { ReviewID = 0 };
+            underTest.Create(expectedContent);
 
-            var result = underTest.GetById(expectedSong.Id);  // The Id was set by EF when we call Create above.
+            var result = underTest.GetById(expectedContent.ReviewID);
 
-            Assert.Equal(expectedSong.Title, result.Title);
+            Assert.Equal(expectedContent.ReviewID, result.ReviewID);
         }
 
         [Fact]
         public void Delete_Reduces_Count()
         {
-            var song = new Song() { Title = "Baby Shark" };
-            underTest.Create(song);
+            var myReview = new Review() { Content = "My Review Text" };
+            underTest.Create(myReview);
 
-            underTest.Delete(song);
+            underTest.Delete(myReview);
             var count = underTest.Count();
 
             Assert.Equal(0, count);
@@ -71,8 +71,8 @@ namespace mlp.Tests
         [Fact]
         public void GetAll_Returns_All()
         {
-            underTest.Create(new Song() { Title = "Baby Shark" });
-            underTest.Create(new Song() { Title = "Never gonna give you up" });
+            underTest.Create(new Review() { Content = "My Review Text" });
+            underTest.Create(new Review() { Content = "My Review Text 2" });
 
             var all = underTest.GetAll();
 
