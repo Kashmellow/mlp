@@ -12,7 +12,7 @@ namespace mlp.Models
         public string Content { get; set; }
         public string ReviewerName { get; set; }
         public double Rating { get; set; }
-       
+
         public virtual Product Product { get; set; }
         public virtual int ProductId { get; set; }
 
