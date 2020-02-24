@@ -99,7 +99,15 @@ namespace mlp
                       ReviewerName = "Charles",
                       ProductId = 4,
                       Rating = 5.0,
-                  }
+                  },
+
+                 new Review
+                 {
+                     ReviewId = 10,
+                     Content = "I just have to be the one to say it. Rainbow Dash isn't all she's cracked up to be. I've literally had night terrors where she appears at the end of my bed and her eyes are like black bottomless pits into the darkness of my soul. So scary.",
+                     ReviewerName = "Viktor",
+                     ProductId = 1,
+                     Rating = 1.0,
 
                 );
 
