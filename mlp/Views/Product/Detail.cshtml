@@ -1,15 +1,23 @@
 ﻿@model mlp.Models.Product
+
+@section ponyDetail{ 
+    <div class="bgred">
+        <header id="ponyDetail">
+            <img src="~/img/@Model.Image" alt="@Model.Name">
+            <h1>@Model.Name</h1>
+            <h2>@Model.Description</h2>
+        </header>
+    </div>
+}
+
 <h1>@Model.Name</h1>
 
 <section id="spartanprojects">
     <div id="projects">
 
         <article>
-            <img src="~/img/@Model.Image" alt="@Model.Name">
+           
             <h3>@Model.Name</h3>
-            <p>
-                @Model.Description
-            </p>
             <p>
                 @Model.Category
             </p>
