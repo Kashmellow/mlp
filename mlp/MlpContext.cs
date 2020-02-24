@@ -16,8 +16,6 @@ namespace mlp
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=Mlp;Trusted_Connection=True;";
 
-            //var connectionString = "Server=DESKTOP-VRNV90S\\SQLEXPRESS;Database=Mlpdev;Trusted_Connection=True;";
-
             optionsBuilder.UseSqlServer(connectionString)
               .UseLazyLoadingProxies();
 
