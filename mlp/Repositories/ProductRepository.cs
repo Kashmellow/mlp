@@ -6,25 +6,11 @@ using mlp.Models;
 
 namespace mlp.Repositories
 {
-    public class ProductRepository : IRepository<Product>
+    public class ProductRepository : Repository<Product>
     {
-        private MlpContext db;
-
-        public ProductRepository(MlpContext db)
+        public ProductRepository(MlpContext context) : base(context)
         {
-            this.db = db;
-        }
 
-        public IEnumerable<Product> GetAll()
-        {
-            return db.Products;
         }
-
-        public Product GetById(int id)
-        {
-            
-            return db.Products.Find(id);
-        }
-
     }
 }
