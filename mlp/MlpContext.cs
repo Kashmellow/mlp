@@ -93,13 +93,13 @@ namespace mlp
                 },
 
                 new Review
-                  {
-                      ReviewId = 9,
-                      Content = "I don't even know where to start with Twilight Sparkle. If I could give her more than 5 stars, I would. I deeply connect with her cutie mark which represents the interconnectedness of all. I just got it as a tattoo. TS4L ",
-                      ReviewerName = "Charles",
-                      ProductId = 4,
-                      Rating = 5.0,
-                  },
+                {
+                    ReviewId = 9,
+                    Content = "I don't even know where to start with Twilight Sparkle. If I could give her more than 5 stars, I would. I deeply connect with her cutie mark which represents the interconnectedness of all. I just got it as a tattoo. TS4L ",
+                    ReviewerName = "Charles",
+                    ProductId = 4,
+                    Rating = 5.0,
+                },
 
                  new Review
                  {
@@ -109,8 +109,8 @@ namespace mlp
                      ProductId = 1,
                      Rating = 1.0,
 
-                );
-
+                 }
+                 );
             modelbuilder.Entity<Product>().HasData(
                 new Product
                 {
