@@ -6,23 +6,21 @@ using Microsoft.AspNetCore.Mvc;
 using mlp.Repositories;
 using mlp.Models;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace mlp.Controllers
 {
-    public class ProductController : Controller
+    public class ReviewController : Controller
     {
-        IRepository<Product> productRepo;
+        IRepository<Review> reviewRepo;
 
-        public ProductController(IRepository<Product> productRepo)
+        public ReviewController(IRepository<Review> reviewRepo)
         {
-            this.productRepo = productRepo;
+            this.reviewRepo = reviewRepo;
         }
         // GET: /<controller>/
         public ViewResult Index()
         {
             // Set to model
-            var model = productRepo.GetAll();
+            var model = reviewRepo.GetAll();
 
             // Pass model to view
             return View(model);
@@ -30,10 +28,9 @@ namespace mlp.Controllers
 
         public ViewResult Detail(int id)
         {
-            var model = productRepo.GetById(id);
+            var model = reviewRepo.GetById(id);
 
             return View(model);
         }
     }
-
 }
