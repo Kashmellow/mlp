@@ -109,7 +109,28 @@ namespace mlp
                      ProductId = 1,
                      Rating = 1.0,
 
+                 },
+
+                 new Review
+                 {
+                     ReviewId = 11,
+                     Content = "Fluttershy is my personal favorite. I love everything about her and though I do not have anything bad to say about Fluttershy I did have a bad experience with one of the toys. Lets just say it required a doctor consultation. So I give it a 1.",
+                     ReviewerName = "Albert",
+                     ProductId = 2,
+                     Rating = 1.0,
+
+                 },
+
+                 new Review
+                 {
+                     ReviewId = 12,
+                     Content = "I watch My Little Ponies every single day. I am a very big fan of the show and my favorite pony is Pinkie Pie. She is so kind and shy and it reminds me of myself.",
+                     ReviewerName = "Esmay",
+                     ProductId = 3,
+                     Rating = 5.0,
+
                  }
+
                  );
             modelbuilder.Entity<Product>().HasData(
                 new Product
