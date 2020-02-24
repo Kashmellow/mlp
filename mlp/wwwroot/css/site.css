@@ -35,9 +35,10 @@ header, footer, #aboutsection, #spartanprojects, #contact {
 }
 
 header {
-    background: url(../images/spartan-helmet.png) no-repeat;
-    background-position: bottom 1em left;
-    height: 560px;
+    background: url(../img/bigpony.svg) no-repeat;
+    background-position: bottom left;
+    height: 600px;
+    padding-top: 4em;
 }
 
 header, #spartanprojects, footer {
@@ -269,6 +270,7 @@ h2 {
 
 #spartanprojects h2 {
     padding-bottom: .5em;
+    color: #0a0a0a;
 }
 
 #spartanprojects h4 {
@@ -286,7 +288,9 @@ h2 {
 }
 
 article img {
-    width: 100%;
+
+    height: 250px;
+    padding-top: .5em;
 }
 
 article a h3, article a p {

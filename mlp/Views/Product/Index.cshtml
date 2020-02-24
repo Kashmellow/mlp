@@ -1,7 +1,17 @@
 ﻿@model IEnumerable<mlp.Models.Product>
-<h1>My Little Pony List</h1>
+
+@section slider{ 
+    <div class="bgred">
+        <header>
+            <h1>MLP Review</h1>
+            <h2>We love ponies!</h2>
+        </header>
+    </div>
+}
+
 
 <section id="spartanprojects">
+    <h2>My Little Ponies</h2>
     <div id="projects">
 
         @foreach (var pony in Model)

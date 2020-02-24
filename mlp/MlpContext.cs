@@ -135,7 +135,7 @@ namespace mlp
                 {
                     ProductId = 1,
                     Name = "Rainbow Dash",
-                    Image = "rainbowdash.png",
+                    Image = "RainbowDash.svg",
                     Category = "Leader",
                     DateTimeGroup = DateTime.Now,
                     Description = "I am a strong Pony! Haaaaay!"
@@ -144,7 +144,7 @@ namespace mlp
                 {
                     ProductId = 2,
                     Name = "Fluttershy",
-                    Image = "fluttershy.png",
+                    Image = "FlutterShy.svg",
                     Category = "Pony",
                     DateTimeGroup = DateTime.Now,
                     Description = "I am a shy Pony... hello!"
@@ -153,7 +153,7 @@ namespace mlp
                 {
                     ProductId = 3,
                     Name = "Pinkie Pie",
-                    Image = "pinkypie.png",
+                    Image = "PinkyPie.svg",
                     Category = "Pony",
                     DateTimeGroup = DateTime.Now,
                     Description = "I am a fun Pony!!!"
@@ -162,7 +162,7 @@ namespace mlp
                 {
                     ProductId = 4,
                     Name = "Twilight Sparkle",
-                    Image = "twilightsparkle.png",
+                    Image = "TwilightSparkle.svg",
                     Category = "Pony",
                     DateTimeGroup = DateTime.Now,
                     Description = "I am yet another pony, heya!"
