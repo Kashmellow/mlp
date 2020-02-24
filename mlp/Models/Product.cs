@@ -14,7 +14,6 @@ namespace mlp.Models
         public string Category { get; set; }
         public DateTime DateTimeGroup { get; set; }
         public string Description { get; set; }
-        public DateTime ReviewDate { get; set; }
 
         public virtual ICollection<Review> Reviews { get; set; }
 

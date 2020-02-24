@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using mlp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ namespace mlp.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private DbContext db;
+        public DbContext db;
 
         public Repository(DbContext db)
         {

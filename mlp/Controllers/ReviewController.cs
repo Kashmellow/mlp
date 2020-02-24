@@ -11,26 +11,60 @@ namespace mlp.Controllers
     public class ReviewController : Controller
     {
         IRepository<Review> reviewRepo;
-
+        
         public ReviewController(IRepository<Review> reviewRepo)
         {
             this.reviewRepo = reviewRepo;
         }
-        // GET: /<controller>/
+
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Review review)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            reviewRepo.Create(review);
+            return RedirectToAction("Index");
+        }
+        
         public ViewResult Index()
         {
-            // Set to model
             var model = reviewRepo.GetAll();
-
-            // Pass model to view
+            
             return View(model);
         }
-
-        public ViewResult Detail(int id)
+        public ViewResult Details(int id)
         {
-            var model = reviewRepo.GetById(id);
+            Review model = reviewRepo.GetById(id);
 
             return View(model);
         }
+
+        /*[HttpGet]
+        public ViewResult Update(int id)
+        {
+            Review model = reviewRepo.GetById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Review review)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            reviewRepo.Update(review);
+
+            return RedirectToAction("Detail", "Review", new { id = review.ReviewId });
+        }*/
     }
 }
