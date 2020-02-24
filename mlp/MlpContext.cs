@@ -58,6 +58,38 @@ namespace mlp
                     ReviewerName = "Tim",
                     ProductId = 4,
                     Rating = 5.0,
+                },
+                new Review
+                {
+                    ReviewId = 5,
+                    Content = "I love collecting all sorts of ponies, but Rainbow Dash's colors are the best!!",
+                    ReviewerName = "Nick",
+                    ProductId = 1,
+                    Rating = 5.0,
+                },
+                new Review
+                {
+                    ReviewId = 6,
+                    Content = "She's sooooo cute and makes me really happy when I'm lonely (: Wish she talked more though...",
+                    ReviewerName = "Alice",
+                    ProductId = 2,
+                    Rating = 4.0,
+                },
+                new Review
+                {
+                    ReviewId = 7,
+                    Content = "Quite an impeccable product indeed, although I do feel compelled to point out minor fabric manufacturing issues in light of corners being potentially cut during production. That being said, Pinkie Pie is a total cutie that never ceases to melt my tender heart~ Hats off to the lovely souls at Hasbro for spreading the love!",
+                    ReviewerName = "Chad",
+                    ProductId = 3,
+                    Rating = 4.5,
+                },
+                new Review
+                {
+                    ReviewId = 8,
+                    Content = "She's sooooo cute and makes me really happy when I'm lonely (: Wish she talked more though...",
+                    ReviewerName = "Mina",
+                    ProductId = 4,
+                    Rating = 3.5,
                 }
 
                 );
