@@ -8,7 +8,7 @@ namespace mlp.Repositories
 {
     public class ReviewRepository : Repository<Review>
     {
-        public ReviewRepository(MlpContext context): base(context)
+        public ReviewRepository(MlpContext context) : base(context)
         {
 
         }
