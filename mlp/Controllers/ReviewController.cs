@@ -23,6 +23,13 @@ namespace mlp.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ViewResult CreateByProductId(int id)
+        {
+            ViewBag.ProductId = id;
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Create(Review review)
         {
