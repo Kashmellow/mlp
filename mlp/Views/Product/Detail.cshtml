@@ -1,4 +1,4 @@
-﻿@model mlp.Models.Product
+@model mlp.Models.Product
 
 @{
     ViewBag.Title = Model.Name + " Reviews";
@@ -43,6 +43,11 @@
             </ul>
 
         </div>
+          <div>
+        <a href="/Review/Create/@Model.ProductId/" class="button">Leave a review!</a>
+    </div>
+    <a href="/Product/Index">Back to all ponies</a>
+    </div>
 
-        </div>
+
 </section>

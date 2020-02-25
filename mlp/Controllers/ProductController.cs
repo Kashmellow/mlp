@@ -19,11 +19,8 @@ namespace mlp.Controllers
             this.productRepo = productRepo;
         }
         // GET: /<controller>/
-        public  ViewResult Index()
+        public ViewResult Index()
         {
-            // Create repository
-            // ProductRepository productRepo = new ProductRepository();
-
             // Set to model
             var model = productRepo.GetAll();
 
@@ -33,8 +30,6 @@ namespace mlp.Controllers
 
         public ViewResult Detail(int id)
         {
-            // ProductRepository productRepo = new ProductRepository();
-
             var model = productRepo.GetById(id);
 
             return View(model);
