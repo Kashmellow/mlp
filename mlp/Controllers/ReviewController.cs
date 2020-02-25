@@ -54,7 +54,7 @@ namespace mlp.Controllers
             return View(model);
         }
 
-        /*[HttpGet]
+        [HttpGet]
         public ViewResult Update(int id)
         {
             Review model = reviewRepo.GetById(id);
@@ -72,6 +72,6 @@ namespace mlp.Controllers
             reviewRepo.Update(review);
 
             return RedirectToAction("Detail", "Review", new { id = review.ReviewId });
-        }*/
+        }
     }
 }
