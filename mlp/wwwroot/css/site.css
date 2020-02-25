@@ -41,9 +41,18 @@ header {
     padding-top: 4em;
 }
 
-header, #spartanprojects, footer {
-    color: #fff;
-}
+    #ponyDetail {
+        background: none;
+    }
+
+        #ponyDetail img {
+            height: 30em;
+            float: left;
+        }
+
+        header, #spartanprojects, footer {
+            color: #fff;
+        }
 
     header h1 {
         font-size: 5em;

@@ -1,6 +1,10 @@
 ﻿@model mlp.Models.Product
 
-@section ponyDetail{ 
+@{
+    ViewBag.Title = Model.Name + " Reviews";
+}
+
+@section ponyDetail{
     <div class="bgred">
         <header id="ponyDetail">
             <img src="~/img/@Model.Image" alt="@Model.Name">
@@ -12,28 +16,23 @@
 
 <h1>@Model.Name</h1>
 
-<section id="spartanprojects">
-    <div id="projects">
+<section id="#aboutsection">
 
-        <article>
-           
-            <h3>@Model.Name</h3>
+            <h3>
+                Category @Model.Category
+            </h3>
             <p>
-                @Model.Category
-            </p>
-            <p>
-                @Model.DateTimeGroup
+                Posted: @Model.DateTimeGroup
             </p>
 
             @foreach (var review in Model.Reviews)
             {
                 <p>@review.ReviewerName</p>
                 <p>@review.Content</p>
-
+                <p>@review.Rating</p>
+       
             }
 
-        </article>
-
-    </div>
+   
 
 </section>
