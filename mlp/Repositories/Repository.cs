@@ -27,6 +27,12 @@ namespace mlp.Repositories
             db.SaveChanges();
         }
 
+        public void Update(T entity)
+        {
+            db.Set<T>().Update(entity);
+            db.SaveChanges();
+        }
+
         public T GetById(int id)
         {
             return db.Set<T>().Find(id);
