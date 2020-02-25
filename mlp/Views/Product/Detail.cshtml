@@ -14,25 +14,35 @@
     </div>
 }
 
-<h1>@Model.Name</h1>
+<section id="aboutsection">
+    <div id="aboutcontainer">
 
-<section id="#aboutsection">
-
+        <div class="grid-item grid-item-1">
             <h3>
                 Category @Model.Category
             </h3>
+            <br />
             <p>
                 Posted: @Model.DateTimeGroup
             </p>
+        </div>
 
-            @foreach (var review in Model.Reviews)
-            {
-                <p>@review.ReviewerName</p>
-                <p>@review.Content</p>
-                <p>Rating:@review.Rating</p>
-       
-            }
 
-   
+        <div class="grid-item grid-item-3">
 
+            <ul id="ponyreviews">
+                @foreach (var review in Model.Reviews)
+                {
+                <li>
+                    <h4>@review.ReviewerName</h4>
+                    <h5>Rating:@review.Rating</h5>
+                    <p>@review.Content</p>
+                </li>
+
+                }
+            </ul>
+
+        </div>
+
+        </div>
 </section>
