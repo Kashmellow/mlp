@@ -37,6 +37,7 @@
                     <h4>@review.ReviewerName</h4>
                     <h5>Rating:@review.Rating</h5>
                     <p>@review.Content</p>
+                    <a href="/Review/Update/@review.ReviewId/" class="button">Update review!</a>
                 </li>
 
                 }
@@ -44,7 +45,7 @@
 
         </div>
           <div>
-        <a href="/Review/Create/@Model.ProductId/" class="button">Leave a review!</a>
+        <a href="/Review/Create/@Model.ProductId/" class="bigpink">Leave a review!</a>
     </div>
     <a href="/Product/Index">Back to all ponies</a>
     </div>
