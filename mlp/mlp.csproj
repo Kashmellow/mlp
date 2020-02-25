@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\img\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\img\fluttershy.jpg" />
     <None Include="wwwroot\img\pinkiepie.jpg" />
     <None Include="wwwroot\img\rainbowdash.jpg" />

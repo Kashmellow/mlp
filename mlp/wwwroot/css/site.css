@@ -17,6 +17,14 @@ header, section {
     min-height: 20em;
 }
 
+a.bigpink:hover {
+    color: #0adcfa;
+}
+
+main {
+    background: url(../img/bg-souvenirs.gif) repeat;
+}
+
 h1{
     padding-top: 2em;
 }
@@ -257,25 +265,40 @@ h2 {
     .grid-item-3 ul {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-evenly;
         margin-top: 2em;
         padding: 0;
     }
 
         .grid-item-3 ul li {
-            width: 3.5em;
+            width: 100%;
             list-style-type: none;
+            background: rgb(123,128,51);
+            background: linear-gradient(90deg, rgba(123,128,51,1) 0%, rgba(193,241,8,0.9976190305223652) 95%);
+            color: #fff;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            border-radius: 25px;
         }
+    
+       .grid-item-3 ul li h4
+        {
+           float:left;
+       }
 
 
 
-#projects {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-}
+
+
+
+
+
+            #projects {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                padding: 0;
+                margin: 0;
+            }
 
 #spartanprojects h2 {
     padding-bottom: .5em;
