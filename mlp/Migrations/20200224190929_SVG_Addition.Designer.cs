@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using mlp;
 
 namespace mlp.Migrations
 {
     [DbContext(typeof(MlpContext))]
-    partial class MlpContextModelSnapshot : ModelSnapshot
+    [Migration("20200224190929_SVG_Addition")]
+    partial class SVG_Addition
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,7 +55,7 @@ namespace mlp.Migrations
                         {
                             ProductId = 1,
                             Category = "Leader",
-                            DateTimeGroup = new DateTime(2020, 2, 24, 14, 13, 45, 271, DateTimeKind.Local).AddTicks(5546),
+                            DateTimeGroup = new DateTime(2020, 2, 24, 14, 9, 28, 372, DateTimeKind.Local).AddTicks(9475),
                             Description = "I am a strong Pony! Haaaaay!",
                             Image = "RainbowDash.svg",
                             Name = "Rainbow Dash",
@@ -63,7 +65,7 @@ namespace mlp.Migrations
                         {
                             ProductId = 2,
                             Category = "Pony",
-                            DateTimeGroup = new DateTime(2020, 2, 24, 14, 13, 45, 276, DateTimeKind.Local).AddTicks(9301),
+                            DateTimeGroup = new DateTime(2020, 2, 24, 14, 9, 28, 376, DateTimeKind.Local).AddTicks(938),
                             Description = "I am a shy Pony... hello!",
                             Image = "FlutterShy.svg",
                             Name = "Fluttershy",
@@ -73,9 +75,9 @@ namespace mlp.Migrations
                         {
                             ProductId = 3,
                             Category = "Pony",
-                            DateTimeGroup = new DateTime(2020, 2, 24, 14, 13, 45, 276, DateTimeKind.Local).AddTicks(9425),
+                            DateTimeGroup = new DateTime(2020, 2, 24, 14, 9, 28, 376, DateTimeKind.Local).AddTicks(1178),
                             Description = "I am a fun Pony!!!",
-                            Image = "PinkyPie.svg",
+                            Image = "PinkiePie.svg",
                             Name = "Pinkie Pie",
                             ReviewDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -83,7 +85,7 @@ namespace mlp.Migrations
                         {
                             ProductId = 4,
                             Category = "Pony",
-                            DateTimeGroup = new DateTime(2020, 2, 24, 14, 13, 45, 276, DateTimeKind.Local).AddTicks(9438),
+                            DateTimeGroup = new DateTime(2020, 2, 24, 14, 9, 28, 376, DateTimeKind.Local).AddTicks(1187),
                             Description = "I am yet another pony, heya!",
                             Image = "TwilightSparkle.svg",
                             Name = "Twilight Sparkle",

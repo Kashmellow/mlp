@@ -1,31 +1,48 @@
 ﻿@model mlp.Models.Product
-<h1>@Model.Name</h1>
 
-<section id="spartanprojects">
-    <div id="projects">
+@{
+    ViewBag.Title = Model.Name + " Reviews";
+}
 
-        <article>
+@section ponyDetail{
+    <div class="bgred">
+        <header id="ponyDetail">
             <img src="~/img/@Model.Image" alt="@Model.Name">
-            <h3>@Model.Name</h3>
-            <p>
-                @Model.Description
-            </p>
-            <p>
-                @Model.Category
-            </p>
-            <p>
-                @Model.DateTimeGroup
-            </p>
-
-            @foreach (var review in Model.Reviews)
-            {
-                <p>@review.ReviewerName</p>
-                <p>@review.Content</p>
-
-            }
-
-        </article>
-
+            <h1>@Model.Name</h1>
+            <h2>@Model.Description</h2>
+        </header>
     </div>
+}
 
+<section id="aboutsection">
+    <div id="aboutcontainer">
+
+        <div class="grid-item grid-item-1">
+            <h3>
+                Category @Model.Category
+            </h3>
+            <br />
+            <p>
+                Posted: @Model.DateTimeGroup
+            </p>
+        </div>
+
+
+        <div class="grid-item grid-item-3">
+
+            <ul id="ponyreviews">
+                @foreach (var review in Model.Reviews)
+                {
+                <li>
+                    <h4>@review.ReviewerName</h4>
+                    <h5>Rating:@review.Rating</h5>
+                    <p>@review.Content</p>
+                </li>
+
+                }
+            </ul>
+
+        </div>
+
+        </div>
 </section>
