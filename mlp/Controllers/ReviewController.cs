@@ -61,7 +61,7 @@ namespace mlp.Controllers
         [HttpGet]
         public ViewResult Delete(int id)
         {
-            Review model = reviewRepo.GetById(id);
+            var model = reviewRepo.GetById(id);
 
             return View(model);
         }
@@ -71,7 +71,7 @@ namespace mlp.Controllers
         {
             reviewRepo.Delete(review);
 
-            return RedirectToAction("Detail", "Product", new { id = review.ProductId });
+            return RedirectToAction("Index", "Product");
         }
     }
 }
