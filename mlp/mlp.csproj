@@ -15,11 +15,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="wwwroot\img\fluttershy.jpg" />
-    <None Include="wwwroot\img\pinkiepie.jpg" />
-    <None Include="wwwroot\img\rainbowdash.jpg" />
-    <None Include="wwwroot\img\twilightsparkle.jpg" />
-  </ItemGroup>
-
 </Project>

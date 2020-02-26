@@ -17,14 +17,9 @@ namespace mlp.Controllers
             this.reviewRepo = reviewRepo;
         }
 
-        [HttpGet]
-        public ViewResult Create()
-        {
-            return View();
-        }
 
         [HttpGet]
-        public ViewResult CreateByProductId(int id)
+        public ViewResult Create(int id)
         {
             ViewBag.ProductId = id;
             return View();
@@ -37,23 +32,12 @@ namespace mlp.Controllers
             {
                 return View();
             }
+
             reviewRepo.Create(review);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Product");
         }
         
-        public ViewResult Index()
-        {
-            var model = reviewRepo.GetAll();
-            
-            return View(model);
-        }
-        public ViewResult Details(int id)
-        {
-            Review model = reviewRepo.GetById(id);
-
-            return View(model);
-        }
-
+      
         [HttpGet]
         public ViewResult Update(int id)
         {
