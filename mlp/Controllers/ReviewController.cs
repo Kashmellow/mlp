@@ -57,5 +57,21 @@ namespace mlp.Controllers
 
             return RedirectToAction("Detail", "Product", new { id = review.ProductId });
         }
+
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            Review model = reviewRepo.GetById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Review review)
+        {
+            reviewRepo.Delete(review);
+
+            return RedirectToAction("Detail", "Product", new { id = review.ProductId });
+        }
     }
 }
