@@ -55,7 +55,7 @@ namespace mlp.Controllers
             }
             reviewRepo.Update(review);
 
-            return RedirectToAction("Detail", "Review", new { id = review.ReviewId });
+            return RedirectToAction("Detail", "Product", new { id = review.ProductId });
         }
     }
 }
