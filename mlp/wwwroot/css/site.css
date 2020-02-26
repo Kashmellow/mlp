@@ -279,11 +279,31 @@ h2 {
             margin-bottom: 1em;
             border-radius: 25px;
         }
-    
-       .grid-item-3 ul li h4
-        {
-           float:left;
-       }
+
+.quote-author {
+    width: 125px;
+    float: left;
+}
+
+    .quote-author img {
+        display: table;
+        margin: 5px auto;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+
+    .quote-author h4 {
+        color: #F58220;
+        padding-left: 3em;
+    }
+
+    .quote-info h5{
+        font-size: 1em;
+    }
+    .grid-item-3 ul li h4 {
+        float: left;
+    }
 
 
 
