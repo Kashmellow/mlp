@@ -1,51 +1,56 @@
 ﻿@model mlp.Models.Review
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<section id="aboutsection">
+    <h4>Create Review</h4>
+    <div id="aboutcontainer">
+
+        <div class="grid-item grid-item-1">
 
 
-    <section id="aboutsection">
-        <h4>Create Review</h4>
-        <div id="aboutcontainer">
+            <hr />
+            <div class="row">
+                <div class="col-md-4">
+                    <form asp-action="Create" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div class="grid-item grid-item-1">
+                        <div class="form-group">
+                            <label asp-for="Content" class="control-label">Content</label>
+                            <br />
+                            <input asp-for="Content" class="form-control" />
+                            <span asp-validation-for="Content" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ReviewerName" class="control-label">Reviewer Name</label>
+                            <br />
+                            <input asp-for="ReviewerName" class="form-control" />
+                            <span asp-validation-for="ReviewerName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Rating" class="control-label">Rating</label>
+                            <br />
+                            <input asp-for="Rating" class="form-control" />
+                            <span asp-validation-for="Rating" class="text-danger"></span>
+                        </div>
 
-
-                <hr />
-                <div class="row">
-                    <div class="col-md-4">
-                        <form asp-action="Create" method="post">
-                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                            <div class="form-group">
-                                <label asp-for="Content" class="control-label">Content</label>
-                                <br />
-                                <input asp-for="Content" class="form-control" />
-                                <span asp-validation-for="Content" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="ReviewerName" class="control-label">Reviewer Name</label>
-                                <br />
-                                <input asp-for="ReviewerName" class="form-control" />
-                                <span asp-validation-for="ReviewerName" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Rating" class="control-label">Rating</label>
-                                <br />
-                                <input asp-for="Rating" class="form-control" />
-                                <span asp-validation-for="Rating" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" value="Create" class="btn btn-primary" />
-                            </div>
-                        </form>
-                    </div>
+                        <div class="form-group">
+                            <input asp-for="ProductId" value="@ViewBag.ProductId" type="hidden" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </form>
                 </div>
-
-
-                <div class="grid-item grid-item-3">
-                    <a href="/Product/Index"> Equestria</a>
-                </div>
-
             </div>
+
+
+            <div class="grid-item grid-item-3">
+                <a href="/Product/Index"> Equestria</a>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
 
 

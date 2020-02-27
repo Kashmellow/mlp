@@ -17,9 +17,6 @@ header, section {
     min-height: 20em;
 }
 
-a.bigpink:hover {
-    color: #0adcfa;
-}
 
 main {
     background: url(../img/bg-souvenirs.gif) repeat;
@@ -141,19 +138,22 @@ h2 {
     #aboutcontainer .grid-item-1 {
         display: flex;
         flex-flow: row wrap;
-        width: 32%;
-        align-items: center;
-        justify-content: center;
+        width: 100%;
+      
     }
 
-    #aboutcontainer img {
-        -moz-box-shadow: 0px 6px 5px rgb(121, 118, 118);
-        -webkit-box-shadow: 0px 6px 5px rgb(121, 118, 118);
-        box-shadow: 0px 6px 5px rgb(121, 118, 118);
-        -moz-border-radius: 230px;
-        -webkit-border-radius: 230px;
-        border-radius: 230px;
-    }
+
+        #aboutcontainer .grid-item-1 h3 {
+            font-size: 2em;
+        }
+        #aboutcontainer img {
+            -moz-box-shadow: 0px 6px 5px rgb(121, 118, 118);
+            -webkit-box-shadow: 0px 6px 5px rgb(121, 118, 118);
+            box-shadow: 0px 6px 5px rgb(121, 118, 118);
+            -moz-border-radius: 230px;
+            -webkit-border-radius: 230px;
+            border-radius: 230px;
+        }
 
 
 
@@ -260,6 +260,7 @@ h2 {
     .grid-item-3 h3 {
         font-size: 2em;
         margin-bottom: 1em;
+
     }
 
     .grid-item-3 ul {
@@ -279,11 +280,59 @@ h2 {
             margin-bottom: 1em;
             border-radius: 25px;
         }
-    
-       .grid-item-3 ul li h4
-        {
-           float:left;
-       }
+
+            .grid-item-3 ul li:hover {
+       
+                background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+                color: #fff;
+           
+            }
+
+.quote-author {
+    width: 125px;
+    float: left;
+    padding-top: 2em;
+}
+
+    .quote-author img {
+        display: table;
+        margin: 5px auto;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+    }
+
+    .quote-author h4 {
+        color: #F58220;
+        padding-left: 3em;
+    }
+
+    .quote-info h5{
+        font-size: 2em;
+    }
+
+.quote-info p {
+    font-size: 1.4em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+
+#editactions {
+    font-size: 1em;
+    float: right;
+    padding-right: 1em;
+}
+#updatereview {
+    padding-right: .5em;
+}
+#deletereview{
+
+}
+
+.grid-item-3 ul li h4 {
+    float: left;
+}
 
 
 
@@ -402,3 +451,19 @@ footer {
     padding-bottom: 1em;
     text-align: center;
 }
+
+div.bigpink{
+    float:right;
+}
+
+
+    div.bigpink a {
+        color: #00bdbd;
+        font-size: 2em;
+    }
+
+
+        div.bigpink a:hover {
+            color: #DD00F3;
+            font-size: 5em;
+        }
