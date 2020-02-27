@@ -21,10 +21,7 @@
             <h3>
                 Category @Model.Category
             </h3>
-            <br />
-            <p>
-                Posted: @Model.DateTimeGroup
-            </p>
+         
         </div>
 
 
@@ -35,15 +32,18 @@
                 {
                 <li>
                     <div class="quote-author">
-                        <img src="~/avatars/avatar1@2x.png" alt="img">
+                        <img src="~/avatars/avatar5@2x.png" alt="img">
                         <h4>@review.ReviewerName</h4>
                     </div>
                     <div class="quote-info">
                         <h5>Rating: @review.Rating</h5>
 
                         <p>@review.Content</p>
-                        <a href="/Review/Update/@review.ReviewId/" class="button">Update review!</a>
-                        <a href="/Review/Delete/@review.ReviewId/" class="button">Delete review!</a>
+                        <p id="editactions">
+                            <a id="updatereview" href="/Review/Update/@review.ReviewId/" class="button">Update review!</a>
+                            <a id="deletereview" href="/Review/Delete/@review.ReviewId/" class="button">Delete review!</a>
+                        </p>
+                        
                     </div>
                 </li>
 
@@ -51,8 +51,8 @@
             </ul>
 
         </div>
-          <div>
-        <a href="/Review/Create/@Model.ProductId/" class="bigpink">Leave a review!</a>
+          <div class="bigpink">
+        <a href="/Review/Create/@Model.ProductId/" >Leave a review!</a>
     </div>
     <a href="/Product/Index">Back to all ponies</a>
     </div>
